@@ -1,5 +1,7 @@
 #include "main.h"
 
+void print_buffer(char buffer[], int *buff_ind);
+
 /**
  * _printf - Printf function
  * @format: format.
@@ -37,6 +39,7 @@ int _printf(const char *format, ...)
 			++i;
 			printed = handle_print(format, &i, list, buffer,
 				flags, width, precision, size);
+			buff_ind == 0;
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
@@ -46,6 +49,7 @@ int _printf(const char *format, ...)
 	print_buffer(buffer, &buff_ind);
 
 	va_end(list);
+
 	return (printed_chars);
 }
 
