@@ -1,6 +1,7 @@
 #include "main.h"
 
 /************************* WRITE HANDLE *************************/
+
 /**
  * handle_write_char - Prints a string
  * @c: char types.
@@ -226,7 +227,7 @@ int write_pointer(char buffer[], int ind, int length,
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[ind], length) + write(1, &buffer[3], i - 3));
 		}
-		else if (!(flags & F_MINUS) && padd == ' ') /* extra char to left of buffer */
+		else if (!(flags & F_MINUS) && padd == ' ')/* extra char to left of buffer */
 		{
 			buffer[--ind] = 'x';
 			buffer[--ind] = '0';
